@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vilesh Hotel</title>
+  <link rel="stylesheet" href="hotel.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">Vilesh</div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="slider">
+      <div class="slides">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/265961921.jpg?k=92c475340d394f25bde0db1780bc89ef56579c54e788fbf8ddf995d56a2359d2&o=&hp=1" alt="Hotel View 1" />
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/265964273.jpg?k=c2c884d584906b7601ee3c37cd6992abc22bde8d8e30ecb08bb4891418e68fe4&o=&hp=1" alt="Hotel View 2" />
+        <img src="https://scontent.fgyd4-2.fna.fbcdn.net/v/t39.30808-6/487298472_1229899479139391_7584973642636930947_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=dY8PfvCvE08Q7kNvwHreef7&_nc_oc=AdkADHzc2sfbM1l_QXBGYAbuRVli4Ay_bPADGMhXdVLRQQ2COwOfcs-VprTNGxzcRaM&_nc_zt=23&_nc_ht=scontent.fgyd4-2.fna&_nc_gid=vBVLhdF1xR62GD7xJRe1lw&oh=00_AfM7HIMRNNF99KNyIWXqyWC_IsS-a6C_ijKQG919QRL1Ww&oe=685AF3C9" alt="Hotel View 3" />
+      </div>
+    </div>
+    <div class="hero-content">
+      <h1>Welcome to Vilesh Hotel</h1>
+      <p>Experience luxury and comfort in the heart of the city.</p>
+      <button class="btn" id="bookNowBtn">Book Now</button>
+    </div>
+  </section>
+
+  <section class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search..." />
+    <button id="searchBtn" >Search</button>
+  </section>
+
+  <section class="rooms" id="rooms">
+    <div class="room-card">
+      <img src="https://padmahotelbandung.com/images/content/deluxe-room.jpg" alt="Deluxe Room" />
+      <div class="room-info">
+        <h3>Deluxe Room</h3>
+        <p>Spacious room with mountain views, king-size bed, and modern amenities.</p>
+        <button class="wishlist-btn" data-id="deluxe">Add to Wishlist</button>
+      </div>
+    </div>
+    <div class="room-card">
+      <img src="https://www.elysium.gr/app/uploads/sites/11/2019/11/Elite_Club_Luxury_Suite_Sea_View_ELYSIUM_RHODES_CAROUSEL.jpg" alt="Suite" />
+      <div class="room-info">
+        <h3>Luxury Suite</h3>
+        <p>Premium suite with separate living area, balcony, and exquisite decor.</p>
+        <button class="wishlist-btn" data-id="suite">Add to Wishlist</button>
+      </div>
+    </div>
+    <div class="room-card">
+      <img src="https://lh5.googleusercontent.com/proxy/X9j1LzcpFPRODNhRXKmJzZX5Y6DXmmPQ8R614G13-sx6g6Dy9IjflSdOW_YTj7nJwIECUAzeWTqzfce8Q45NeYF0GDFqntluQyafwcHLKrtX66SfipCqa7hDLtecX4cSXsA_oKqGaD9841S1zxo06RWbg10YxIAhgQ" alt="Standard Room" />
+      <div class="room-info">
+        <h3>Standard Room</h3>
+        <p>Comfortable room with all basic facilities for a pleasant stay.</p>
+        <button class="wishlist-btn" data-id="standard">Add to Wishlist</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="booking-section">
+    <h2>Book Your Stay</h2>
+    <form id="bookingForm">
+      <label for="name">Full Name</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="room">Room Type</label><br />
+      <select id="room" name="room" required>
+        <option value="">Select a room</option>
+        <option value="Deluxe Room">Deluxe Room</option>
+        <option value="Luxury Suite">Luxury Suite</option>
+        <option value="Standard Room">Standard Room</option>
+      </select><br /><br />
+
+      <label for="checkin">Check-in Date</label><br />
+      <input type="date" id="checkin" name="checkin" required /><br /><br />
+
+      <label for="checkout">Check-out Date</label><br />
+      <input type="date" id="checkout" name="checkout" required /><br /><br />
+
+      <button type="submit" class="btn">Submit Booking</button>
+    </form>
+    <p id="bookingMsg" class="booking-msg"></p>
+  </section>
+
+  <footer id="contact">
+    <p>Contact us at <a href="mailto:info@vilesh.com">info@vilesh.com</a> or call +994 50 444 44 44</p>
+    <p>&copy; 2025 Vilesh Hotel. All rights reserved.</p>
+  </footer>
+
+  <script src="hotel.js"></script>
+</body>
+</html>
